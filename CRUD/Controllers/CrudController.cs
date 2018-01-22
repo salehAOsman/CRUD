@@ -14,7 +14,8 @@ namespace CRUD.Controllers
             return View();
         }
 
-        // GET: Crud/Details/5
+
+        [HttpGet]
         public ActionResult Details(int id)
         {
             return View();

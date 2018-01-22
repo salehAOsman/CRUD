@@ -20,7 +20,7 @@ namespace CRUD.Controllers
         {
             return View();
         }
-
+         
         [HttpPost]
         public ActionResult Create(int id, string name, string city, string phone)
         {
@@ -34,7 +34,45 @@ namespace CRUD.Controllers
             DataList.dataList.Add(newPer);
 
             //redirect to go back index side
-            RedirectToAction("Index");
+            return RedirectToAction("Index");
         }
-    } 
+        [HttpGet]
+        public ActionResult Edit()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Edit(int id)
+        {
+            //ToDo
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult Details()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Details(int id)
+        {
+            //ToDo
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public ActionResult Delete()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Delete(int id)
+        {
+            //ToDo
+
+            return RedirectToAction("Index");
+        }
+
+
+    }
 }

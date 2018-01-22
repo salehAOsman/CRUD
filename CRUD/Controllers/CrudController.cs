@@ -8,7 +8,7 @@ namespace CRUD.Controllers
 {
     public class CrudController : Controller
     {
-        // GET: Crud
+        [HttpGet]
         public ActionResult Index()
         {
             return View();

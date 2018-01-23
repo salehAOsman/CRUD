@@ -4,5 +4,27 @@
 }
 
 <h2>Delete</h2>
+<!--we do not need here form for this info because we need just to delete we dont have update -->
+<table class="table">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>City</th>
+    </tr>
+    <tr>
+        <td>@Model.Id</td>
+        <td>@Model.Name</td>
+        <td>@Model.Phone</td>
+        <td>@Model.City</td>
+    </tr>
+
+</table>
+<!--we need this button for confirmed delete it need Form with post to know wich method that will run-->
+@Html.BeginForm("ConfirmDelete", "Home", FormMethod.Post)
+<!--type of this input to deleted is hidden-->
+<!--we need to have value for Id that we will deleted and this value will assign by "id" name-->
+<input type="hidden" name="id" value="@Model.Id" />
+<input type="submit" value="Confirm" class="form-control" />
 
 @Html.ActionLink("Back home", "Index")

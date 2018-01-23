@@ -1,8 +1,20 @@
-﻿
+﻿@model CRUD.Models.Person
+
+
 @{
     ViewBag.Title = "Edit";
 }
 
 <h2>Edit</h2>
+
+@Html.BeginForm("Edit","Home",FormMethod.Post)
+
+@Html.LabelFor(Model =>Model.Id)@Html.EditorFor(Model=>Model.Id)
+@Html.LabelFor(Model => Model.Name)@Html.EditorFor(Model => Model.Name)
+@Html.LabelFor(Model => Model.City)@Html.EditorFor(Model => Model.City)
+@Html.LabelFor(Model => Model.Phone)@Html.EditorFor(Model => Model.Phone)
+
+<input type="submit"  value="Save"  class="form-control"/>
+
 
 @Html.ActionLink("Back home", "Index")

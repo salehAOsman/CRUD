@@ -14,12 +14,12 @@ namespace CRUD.Controllers
         {
             return View(DataList.dataList);
         }
-        //this method type of this method is post because we need to sent info serach to server from the same index page 
+        //this type of this method is post because we need to sent info serach to server from the same index page 
         [HttpPost]
         public ActionResult Index(string searchText)
         {
-            return View( DataList.dataList.Where(x => x.Name == searchText));
-);
+            return View(DataList.dataList.Where(x => x.Name.ToLower().Contains(searchText.ToLower())) /*|| x = > x.City.ToLower().Contains(searchText.ToLower()))*/ );
+            /*return View( DataList.dataList.Where(x => x.Name == searchText));*///it work with exact search 
         }
 
         [HttpGet]

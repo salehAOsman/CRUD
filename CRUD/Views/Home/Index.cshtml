@@ -1,4 +1,4 @@
-﻿<!--we change type of using to model to list here -->
+﻿<!--we change type of using to model with list "IEnumerable<CRUD.Models.Person>" here -->
 @model IEnumerable<CRUD.Models.Person>
 
 @{
@@ -16,13 +16,14 @@
     <p>search : </p><input type="text" name="searchText" value="" placeholder="input to search"/>
     <input type="submit"  value="Search" />
 </form>
-
+<br />
 <table class="table">
     <tr>
         <th>Id</th>
         <th>Name</th>
         <th>Phone</th>
         <th>City</th>
+        <th></th>
     </tr>
     <!--we write name class. object of list-->
     @foreach (var item in Model)
